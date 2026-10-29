@@ -1,0 +1,45 @@
+{
+  "name": "dsh-grill-with-forms",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Grill a plan or design through native DSH question cards: batched decisions with recommendations, a free-text escape on every question, and optional glossary/ADR output.",
+  "meta": {
+    "title": "Grill With Forms",
+    "description": "用原生提问卡片批量澄清设计决策，每题带推荐答案与自由填写兜底"
+  },
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "cordis.patch.yml",
+    "assets",
+    "docs",
+    "README.md",
+    "README.en.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "ATTRIBUTION.md"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "grilling",
+    "design-review",
+    "skill"
+  ],
+  "license": "MIT",
+  "author": "He Binghui",
+  "scripts": {
+    "test": "node --test"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
