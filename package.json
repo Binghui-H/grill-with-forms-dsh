@@ -34,6 +34,14 @@
   ],
   "license": "MIT",
   "author": "He Binghui",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Binghui-H/grill-with-forms-dsh.git"
+  },
+  "homepage": "https://github.com/Binghui-H/grill-with-forms-dsh#readme",
+  "bugs": {
+    "url": "https://github.com/Binghui-H/grill-with-forms-dsh/issues"
+  },
   "scripts": {
     "test": "node --test"
   },
