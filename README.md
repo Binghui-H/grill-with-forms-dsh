@@ -38,15 +38,23 @@
 ### 插件包（推荐）
 
 ```powershell
+dsh plugin --profile desktop add dsh-grill-with-forms
+```
+
+不经过 npm 的两种装法：
+
+```powershell
+dsh plugin --profile desktop add github:Binghui-H/grill-with-forms-dsh
+dsh plugin --profile desktop add ./dsh-grill-with-forms-0.1.0.tgz
+```
+
+本地开发时可以直接指向工作目录：
+
+```powershell
 dsh plugin --profile desktop add D:\git\grill-with-forms-dsh
 ```
 
-也可以用 tarball 或 git：
-
-```powershell
-dsh plugin --profile desktop add ./dsh-grill-with-forms-0.1.0.tgz
-dsh plugin --profile desktop add github:Binghui-H/grill-with-forms-dsh
-```
+区别在于**装进去的是链接还是快照**：`D:\...` 这种本地路径会记录成 `link:`，改文件立刻生效；npm 和 git 源会把包拷进 profile 的 `node_modules`，成为独立快照，改本地代码不影响它。
 
 装完**不需要重启**：技能目录会立刻刷新，`/` 菜单里就能看到三个入口。卸载：
 

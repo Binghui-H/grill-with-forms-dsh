@@ -33,15 +33,23 @@ Type `/` in the input box. Skills with `disable-model-invocation: true` are reac
 ## Install
 
 ```powershell
+dsh plugin --profile desktop add dsh-grill-with-forms
+```
+
+Without npm, use the git source or a tarball:
+
+```powershell
+dsh plugin --profile desktop add github:Binghui-H/grill-with-forms-dsh
+dsh plugin --profile desktop add ./dsh-grill-with-forms-0.1.0.tgz
+```
+
+For local development, point at the working directory:
+
+```powershell
 dsh plugin --profile desktop add D:\git\grill-with-forms-dsh
 ```
 
-Or from a tarball or git:
-
-```powershell
-dsh plugin --profile desktop add ./dsh-grill-with-forms-0.1.0.tgz
-dsh plugin --profile desktop add github:Binghui-H/grill-with-forms-dsh
-```
+The difference is link versus snapshot: a local path is recorded as `link:`, so edits take effect immediately; npm and git sources copy the package into the profile's `node_modules` as an independent snapshot that your local edits do not affect.
 
 No restart is needed: the skill catalog refreshes and the three entries appear under `/`. Remove with:
 
